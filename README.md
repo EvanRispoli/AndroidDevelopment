@@ -7,8 +7,8 @@
 * Loads the visual components and their events.
 * It has a life cycle.
 
-[] ### onCreate()
-[] ### onStart()
-[] ### onResume()
-[] ### onPause()
-[] ### onDestroy
+#### onCreate()
+####onStart()
+#### onResume()
+#### onPause()
+#### onDestroy
