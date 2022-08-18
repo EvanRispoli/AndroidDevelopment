@@ -8,7 +8,7 @@
 * It has a life cycle.
 
 #### onCreate()
-####onStart()
+#### onStart()
 #### onResume()
 #### onPause()
 #### onDestroy
