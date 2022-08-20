@@ -1,64 +1,61 @@
 package com.example.myapplication
 
-import android.content.ContentValues.TAG
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import org.w3c.dom.Text
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var btn_plus:Button;
-    lateinit var btn_minus:Button;
-    lateinit var tv_mouse_qty: TextView;
+    private lateinit var btnPlus: Button
+    private lateinit var btnMinus: Button
+    private lateinit var tvMouseQty: TextView
     //lateinit don't define a value immediately, but it causes an error if we start the app
 
-    var mouseQty: Int = 0;
+    private var mouseQty: Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-       settings()
+        settings()
     }
 
-    fun settings(){
+    private fun settings() {
         viewsStart()
         setButtons()
 
     }
-    fun viewsStart(){
-        btn_plus = findViewById(R.id.btn_plus);  //represents the btn_plus on screen
-        btn_minus = findViewById(R.id.btn_minus); //represents the btn_minus on screen
-        tv_mouse_qty = findViewById(R.id.tv_mouse_qty); //represents the tv_mouse_qty on screen
+
+    private fun viewsStart() {
+        btnPlus = findViewById(R.id.btn_plus)  //represents the btn_plus on screen
+        btnMinus = findViewById(R.id.btn_minus) //represents the btn_minus on screen
+        tvMouseQty = findViewById(R.id.tv_mouse_qty) //represents the tv_mouse_qty on screen
         //If we use the lateinit, we have to declare the values before start the app.
     }
 
-    fun setButtons(){
-        btn_plus.setOnClickListener{
-            mouseAdd();
+    private fun setButtons() {
+        btnPlus.setOnClickListener {
+            mouseAdd()
         }
-        btn_minus.setOnClickListener{
-            mouseSub();
+        btnMinus.setOnClickListener {
+            mouseSub()
         }
     }
 
     //Creates a function to increment the mouse qty
-    fun mouseAdd(){
-        mouseQty++;
-        tv_mouse_qty.text = mouseQty.toString();
+    private fun mouseAdd() {
+        mouseQty++
+        tvMouseQty.text = mouseQty.toString()
     }
+
     //Creates a function to decrement the mouse qty
-    fun mouseSub(){
-        if (mouseQty == 0){
-            mouseQty = 0;
-        }else {
-            mouseQty--;
+    private fun mouseSub() {
+        if (mouseQty > 0) {
+            mouseQty--
         }
-        tv_mouse_qty.text = mouseQty.toString();
+        tvMouseQty.text = mouseQty.toString()
     }
 
 
