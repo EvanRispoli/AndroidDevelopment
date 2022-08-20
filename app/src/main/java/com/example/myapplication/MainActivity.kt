@@ -14,25 +14,5 @@ class MainActivity : AppCompatActivity() {
         Log.i(TAG, "onCreate")
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.i(TAG, "onStart")
-    }
 
-    override fun onResume() {
-        super.onResume()
-        Log.i(TAG, "onResume")
-
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.i(TAG, "onPause")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i(TAG, "onStop")
-
-    }
 }
