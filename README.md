@@ -7,8 +7,7 @@
 * Loads the visual components and their events.
 * It has a life cycle.
 
-#### onCreate()
-#### onStart()
-#### onResume()
-#### onPause()
-#### onDestroy
+## Desafio 01:
+* Construa um app de uma tela
+* com alguns produtos e pre¸cos.
+* Construa bot˜oes para adicionar itens ao carrinho e calcular o valor total.
